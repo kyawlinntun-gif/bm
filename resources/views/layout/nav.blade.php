@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid mr-5">
-        <a class="navbar-brand" href="#"><i class="fas fa-home"></i> ShopKeeper</a>
+        <a class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-home"></i> ShopKeeper</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,6 +17,16 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-cart-arrow-down"></i> Cart</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 0;">
+                        <li><a class="dropdown-item" href="{{ url('/products/create') }}">Create</a></li>
+                        <li><a class="dropdown-item" href="#">View all products</a></li>
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductStoreFormRequest;
 
 class ProductController extends Controller
 {
@@ -24,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -33,9 +34,23 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductStoreFormRequest $request)
     {
-        //
+        /* -------- Start of File Upload -------- */
+        $file = $request->file('img');
+        $filename = uniqid() . '_' . $file->getClientOriginalName();
+        $path = public_path(). '/uploads/';
+        $file->move($path, $filename);
+        /* -------- End of File Upload -------- */
+
+        Product::create([
+            'title' => $request->get('title'),
+            'price' => $request->get('price'),
+            'description' => $request->get('description'),
+            'imgs' => $filename,
+        ]);
+
+        return redirect('/products/create')->with('status', 'Successfully inserted data!');
     }
 
     /**

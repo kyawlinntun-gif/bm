@@ -18,6 +18,7 @@
 
                         <div class="col-sm-6 col-md-4">
                             <div class="thumbnail">
+                                <h3 class="text-center">Price $20</h3>
                                 <img src="{{ asset('/img/AngularJS.png') }}" alt="Img" class="img-fluid" style="height: 175px;">
                                 <div class="caption">
                                     <h3 class="text-center">AngularJs Book</h3>
@@ -29,6 +30,7 @@
 
                         <div class="col-sm-6 col-md-4">
                             <div class="thumbnail">
+                                <h3 class="text-center">Price $20</h3>
                                 <img src="{{ asset('/img/Bootstrap.png') }}" alt="Img" class="img-fluid" style="height: 175px;">
                                 <div class="caption">
                                     <h3 class="text-center">Bootstrap Book</h3>
@@ -40,6 +42,7 @@
 
                         <div class="col-sm-6 col-md-4">
                             <div class="thumbnail">
+                                <h3 class="text-center">Price $20</h3>
                                 <img src="{{ asset('/img/JavaScript.png') }}" alt="Img" class="img-fluid" style="height: 175px;">
                                 <div class="caption">
                                     <h3 class="text-center">AngularJs Book</h3>

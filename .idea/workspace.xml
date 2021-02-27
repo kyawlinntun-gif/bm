@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="25a9a462-27bd-44be-87d0-1704ea4c4bd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +160,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -179,11 +181,28 @@
       <workItem from="1614223402367" duration="6864000" />
       <workItem from="1614236162045" duration="3004000" />
       <workItem from="1614253374634" duration="4186000" />
+      <workItem from="1614263681506" duration="1395000" />
+      <workItem from="1614348701939" duration="4324000" />
+      <workItem from="1614353044145" duration="495000" />
+      <workItem from="1614353575273" duration="1830000" />
+      <workItem from="1614386258079" duration="220000" />
+      <workItem from="1614393492613" duration="4550000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
