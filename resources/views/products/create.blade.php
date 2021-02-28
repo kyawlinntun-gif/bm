@@ -38,7 +38,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="img" class="form-label d-block">Image</label>
-                                <input type="file" id="img" name="img">
+                                <input type="file" id="img" name="img[]" multiple>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

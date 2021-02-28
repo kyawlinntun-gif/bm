@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductStoreFormRequest;
+use Illuminate\Support\Facades\Mail;
 
 class ProductController extends Controller
 {
@@ -34,23 +35,59 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductStoreFormRequest $request)
+    public function store(Request $request)
     {
-        /* -------- Start of File Upload -------- */
-        $file = $request->file('img');
-        $filename = uniqid() . '_' . $file->getClientOriginalName();
-        $path = public_path(). '/uploads/';
-        $file->move($path, $filename);
-        /* -------- End of File Upload -------- */
 
-        Product::create([
-            'title' => $request->get('title'),
-            'price' => $request->get('price'),
-            'description' => $request->get('description'),
-            'imgs' => $filename,
-        ]);
+        $data = [
+            'title' => 'Testig mail',
+            'content' => 'This is the testing of mailgun.'
+        ];
 
+        Mail::send('email.mail', $data, function ($message){
+            $subject = 'JUST TESTING';
+            $email = 'kyawlinntun100@gmail.com';
+            $username = 'kyawlinntun';
+            $message->to($email, $username)->subject($subject);
+        });
+
+        ///* -------- Start of Multiple File Upload -------- */
+        //$files = $request->file('img');
+        //$filenames = [];
+        //
+        //foreach ($files as $file)
+        //{
+        //    $filename = uniqid() . '_' . $file->getClientOriginalName();
+        //    array_push($filenames, $filename);
+        //    $path = public_path() . '/uploads/';
+        //    $file->move($path, $filename);
+        //}
+        //
+        //Product::create([
+        //    'title' => $request->get('title'),
+        //    'price' => $request->get('price'),
+        //    'description' => $request->get('description'),
+        //    'imgs' => serialize($filenames),
+        //]);
+        //
         return redirect('/products/create')->with('status', 'Successfully inserted data!');
+
+        /* -------- End of Multiple File Upload -------- */
+
+        ///* -------- Start of File Upload -------- */
+        //$file = $request->file('img');
+        //$filename = uniqid() . '_' . $file->getClientOriginalName();
+        //$path = public_path(). '/uploads/';
+        //$file->move($path, $filename);
+        ///* -------- End of File Upload -------- */
+        //
+        //Product::create([
+        //    'title' => $request->get('title'),
+        //    'price' => $request->get('price'),
+        //    'description' => $request->get('description'),
+        //    'imgs' => $filename,
+        //]);
+        //
+        //return redirect('/products/create')->with('status', 'Successfully inserted data!');
     }
 
     /**

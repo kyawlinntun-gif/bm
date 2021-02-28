@@ -24,7 +24,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="min-width: 0;">
                         <li><a class="dropdown-item" href="{{ url('/products/create') }}">Create</a></li>
-                        <li><a class="dropdown-item" href="#">View all products</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/products') }}">View all products</a></li>
                         <li><a class="dropdown-item" href="#">Edit</a></li>
                     </ul>
                 </li>
