@@ -16,7 +16,12 @@
                     <a class="nav-link" href="#"><i class="fas fa-podcast"></i> Brand</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-cart-arrow-down"></i> Cart</a>
+                    <a class="nav-link" href="{{ url('/products/show-cart') }}"><i class="fas fa-cart-arrow-down"></i> Cart
+                        @if(Session::has('items'))
+                            {{ Count(Session::get('items')) }}
+                        @endif
+
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

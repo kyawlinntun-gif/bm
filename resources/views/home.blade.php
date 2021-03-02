@@ -27,8 +27,8 @@
                                         {{-- -------- End of Multiple File -------- --}}
                                         <div class="caption">
                                             <h3 class="text-center">{{ $product->title }}</h3>
-                                            <p>{{ $product->description }}</p>
-                                            <p><a href="#" class="btn btn-info" role="button">View Detail</a> <a href="#" class="btn btn-info float-right" role="button">Add To Cart</a></p>
+                                            <p>{{ substr($product->description, 0, 50) }}</p>
+                                            <p><a href="#" class="btn btn-info" role="button">View Detail</a> <a href="{{ url('/products/'. $product->id . '/add-cart') }}" class="btn btn-info float-right" role="button">Add To Cart</a></p>
                                         </div>
                                     </div>
                                 </div>

@@ -50,25 +50,25 @@ class ProductController extends Controller
             $message->to($email, $username)->subject($subject);
         });
 
-        ///* -------- Start of Multiple File Upload -------- */
-        //$files = $request->file('img');
-        //$filenames = [];
-        //
-        //foreach ($files as $file)
-        //{
-        //    $filename = uniqid() . '_' . $file->getClientOriginalName();
-        //    array_push($filenames, $filename);
-        //    $path = public_path() . '/uploads/';
-        //    $file->move($path, $filename);
-        //}
-        //
-        //Product::create([
-        //    'title' => $request->get('title'),
-        //    'price' => $request->get('price'),
-        //    'description' => $request->get('description'),
-        //    'imgs' => serialize($filenames),
-        //]);
-        //
+        /* -------- Start of Multiple File Upload -------- */
+        $files = $request->file('img');
+        $filenames = [];
+
+        foreach ($files as $file)
+        {
+            $filename = uniqid() . '_' . $file->getClientOriginalName();
+            array_push($filenames, $filename);
+            $path = public_path() . '/uploads/';
+            $file->move($path, $filename);
+        }
+
+        Product::create([
+            'title' => $request->get('title'),
+            'price' => $request->get('price'),
+            'description' => $request->get('description'),
+            'imgs' => serialize($filenames),
+        ]);
+
         return redirect('/products/create')->with('status', 'Successfully inserted data!');
 
         /* -------- End of Multiple File Upload -------- */

@@ -20,3 +20,8 @@ Route::get('/products', 'PageController@index');
 Route::get('/products/create', 'ProductController@create');
 Route::post('/products/create', 'ProductController@store');
 /* -------- End of product -------- */
+
+/* -------- Start of cart -------- */
+Route::get('/products/{cart}/add-cart', 'PageController@addCart');
+Route::get('/products/show-cart', 'PageController@showCart');
+/* -------- End of cart -------- */
